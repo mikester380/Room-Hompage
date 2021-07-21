@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 0.75rem;
+}
+
+.body-scroll {
+  overflow-y: hidden;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  z-index: 2;
+  top: 6.2rem;
+  display: none;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.header .main-header {
+  background-image: url("../images/mobile-image-hero-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 3.125rem 1.25rem 0 1.25rem;
+  transition: background-image 1s;
+  -moz-transition: background-image 1s;
+  position: relative;
+}
+.header .main-header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .main-header .hamburger {
+  position: absolute;
+  z-index: 34;
+}
+
+.navigation {
+  width: 100%;
+  height: 6.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 3.125rem 2.5rem 0 0;
+  background-color: #fff;
+  text-align: right;
+  gap: 0.9rem;
+  display: none;
+}
+.navigation a:link, .navigation a:visited {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 1.25rem;
+}
+
+.slider {
+  width: 7.5rem;
+  height: 3.125rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+}
+.slider div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider div img {
+  height: 1.56rem;
+}
+
+.about-header {
+  padding: 0 1.875rem 0 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-header p {
+  padding-top: 1.25rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #454545;
+  font-weight: 600;
+}
+.about-header .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.about-header .link a:link, .about-header .link a:visited {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 1.875rem;
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+}
+
+.visibility {
+  display: block;
+}
+
+.about img {
+  width: 100%;
+}
+.about .text {
+  padding: 5rem 1.875rem 5rem 1.875rem;
+}
+.about .text h2 {
+  text-transform: uppercase;
+  padding-bottom: 1.25rem;
+}
+.about .text p {
+  line-height: 1.25rem;
+  color: #454545;
+  font-weight: 600;
+}
+
+@media (min-width: 970px) {
+  .header {
+    height: initial;
+    grid-template: 70vh/1.5fr 1fr;
+  }
+  .header .main-header {
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .header .main-header .navigation {
+    display: block;
+    background-color: initial;
+    text-align: left;
+    position: absolute;
+    left: 150px;
+    color: white;
+  }
+  .header .main-header .navigation a:hover {
+    border-bottom: 2px solid #fff;
+  }
+  .header .main-header .hamburger {
+    display: none;
+  }
+  .header .main-header .logo {
+    left: 50px;
+    transform: translate(0);
+  }
+  .header .about-header {
+    padding: 0 5rem 0 5rem;
+  }
+
+  .slider {
+    transform: translateX(7.5rem);
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+  }
+  .about img {
+    height: 100%;
+  }
+  .about * {
+    flex: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

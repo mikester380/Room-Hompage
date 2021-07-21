@@ -1,0 +1,19 @@
+.about{
+    & img{
+        width: 100%;
+    }
+
+    & .text{
+        padding: 5rem 1.875rem 5rem 1.875rem;
+        h2{
+            text-transform: uppercase;
+            padding-bottom: 1.25rem;
+        }
+
+        p{
+            line-height: 1.25rem;
+            color: $veryDarkGray;
+            font-weight: 600;
+        }
+    }
+}

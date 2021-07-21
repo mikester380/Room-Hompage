@@ -1,0 +1,48 @@
+@media (min-width: 970px){
+    .header{
+        height: initial;
+        grid-template: 70vh / 1.5fr 1fr;
+        .main-header{
+            background-image: url('../images/desktop-image-hero-1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            .navigation{
+                display: block;
+                background-color: initial;
+                text-align: left;
+                position: absolute;
+                left: 150px;
+                color: white;
+                & a:hover {
+                    border-bottom: 2px solid #fff;
+                }
+            }
+            .hamburger{
+                display: none;
+            }
+            .logo{
+                left: 50px;
+                transform: translate(0);
+            }
+        }
+        .about-header{
+            padding: 0 5rem 0 5rem;
+        }
+    }
+
+    .slider{
+        transform: translateX(7.5rem);
+    }
+    .about{
+        display: flex;
+        flex-direction: row;
+        img{
+            height: 100%;
+        }
+
+        & * {
+            flex: 1;
+        }
+    }
+}
